@@ -1,0 +1,157 @@
+
+//=========== HERO STYLE ==========//
+
+.testimonial {
+    padding: 180px 30px 0 30px ;
+
+    header {
+        width: 100%;
+
+        h2 {
+           font-size: 22px;
+           margin-bottom: 50px; 
+
+            .golden-text {
+                 @include golden-text;
+            }
+            }
+
+            .company-list-top {
+                @include flex-center;
+                justify-content: center;
+                gap: 8px;
+                border-radius: 5px;
+                width: 100%;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit: fill;
+                    filter: brightness(70%);
+                    border-radius: 50% ;
+                }
+            }
+
+            .company-list-bottom {
+                @include flex-center;
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
+                border-radius: 5px;
+                margin-top: 5px;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    object-fit:inherit;
+                    filter: brightness(70%);
+                    border-radius: 50% ;
+                }
+            }
+
+            .testimonial-center-text {
+                text-align: center;
+                margin: 20px 0;
+                font-size: 14px;
+                font-style: italic;
+                opacity: 70%;
+                letter-spacing: 1px;
+            }
+        }
+        
+    
+    .testimonial-navigation-btn {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        margin: 0px 0 10px 0;
+        gap: 8px;
+
+        .btn-back, .btn-forward {
+            border-radius: 50%;
+            padding: 4px;
+            transition: all 0.05s ease-in;
+            cursor: pointer;
+            
+            img {
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+            &:active {
+                background-color: #000000;
+                border: 2px solid;
+                border-color: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+    
+    .swiper-testimonial-card {
+        @include flex-column;
+        align-items: baseline;
+        position: relative;
+        border: 1px solid;
+        padding: 25px 30px;
+        min-height: 200px;
+        border-radius: 18px;
+        background: #111111;
+        border-color: rgba(255, 255, 255, 0.2);
+
+        .upper-card-text {
+            font-size: 12px;
+            opacity: 60%;
+            margin-bottom: 5px;
+        }
+
+        .middle-card-text {
+            font-size: 14px;
+            font-style: italic;
+            font-family: $font-heading;
+            margin-bottom: 20px;
+        }
+
+        .bottom-card {
+            @include flex-center;
+
+            .profile-info {
+                display: flex;
+                flex-direction: column;
+                margin-left: 10px;
+
+                p {
+                    font-family: $font-heading;
+                    font-size: 12px;
+                }
+
+                .profile-info-bottom-text {
+                    font-size: 10px;
+                    opacity: 70%;
+                }
+            }
+
+            .testimonial-profile {
+                border-radius: 50% ;
+            }
+        }
+    }
+}
+
+// breakpoint large
+@include respond(lg) {
+    .testimonial {
+        padding: 200px 80px 0px 100px;
+
+    header {
+       @include flex-column;
+
+        h2 {
+            font-size: 30px;
+
+            .testimonial-center-text {
+                margin: 30px 0;
+                font-size: 16px;
+            }
+        }
+    }
+}
+}

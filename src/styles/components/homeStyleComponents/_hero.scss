@@ -1,0 +1,528 @@
+
+//=========== HERO STYLE ==========//
+
+// breakpoint default
+.hero {
+   position: relative;
+   display: flex;
+   width: 100%;
+   margin-top: 6vw;
+   z-index: 90;
+
+  .hero-content {
+            position: relative;
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding: 20px;
+
+            header {
+            h1 {
+                font-size: 2rem;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 1rem;
+                opacity: 0.7;
+            }
+        }
+
+        .milestone-container {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .milestone-card {
+            h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            }
+
+            .inner-milestone {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+            }
+        }
+        }
+
+        .cta-buttons {
+            @include flex-center;
+            gap: 15px;
+            margin-top: 50px;
+
+            .explore-button {
+                font-size: 16;
+                text-decoration: none;
+                color: $primary-color;
+                background: white;
+                font-family: $font-heading;
+                padding: 10px 16;
+                border: 2px solid white ;
+                border-radius: 6px;
+            }
+
+            .hero-pricing-button {
+                font-size: 20px;
+                text-decoration: none;
+                color: $font-color;
+                font-family: $font-heading;
+                padding: 10px 30px;
+                transition: all 0.2s;
+                border: 2px solid rgba($color: #000000, $alpha: 0);
+                border-radius: 6px;
+
+                &:hover {
+                    border: 2px solid white ;
+                    border-radius: 6px;
+                    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+                }
+            }
+        }
+
+    }
+
+    .overlay {
+        position: absolute;
+        background: #000000;
+        opacity: 80%;
+        width: 100%;
+        height: 500px;
+        z-index: -5;
+    }
+
+    .swiper-container {
+        position: absolute;
+        z-index: -10;
+        width: 100%;
+
+         .swiper-top, .swiper-bottom {
+                @include flex-center;
+                width: 100%;
+                padding: 60px 0 0 0;
+
+                .swiper-card {
+                    width: 100px;
+                    height: 100px;
+                    padding-top: 10px;
+                    transform: rotate(-1deg) skewX(10deg);
+                    transform-origin: center;
+                    transition: transform 1s ease;
+                    cursor: pointer;
+                    object-fit: cover;
+
+                    .poster {
+                        position: relative;
+                        display: block;
+                        height: auto;
+                        width: 100%;
+                        height: auto;
+                        transition: all 0.3s ease-in;
+                        object-fit: cover;
+                    }
+
+                    .btn-card {
+                        display: none;
+                    }
+                }
+            }
+    }
+}
+
+
+// breakpoint small
+@include respond(sm) {
+    .hero {
+        
+    .hero-content {
+        width: 100%;
+        padding: 60px 40px 40px 40px;
+        z-index: 1000;
+    }
+
+     .swiper-container {
+        position: absolute;
+        z-index: -10;
+        width: 100%;
+        padding-top: 70px;
+
+         .swiper-top, .swiper-bottom {
+                @include flex-center;
+                width: 100%;
+                padding: 10px 0;
+
+                .swiper-card {
+                    width: 100px;
+                    height: 180px;
+                    padding-top: 10px;
+
+                    .btn-card {
+                        display: none;
+                    }
+                }
+            }
+    }
+
+
+
+}
+
+}
+
+
+// breakpoint medium
+@include respond(md) {
+    .hero {
+        position: relative;
+        display: flex;
+        width: 100%;
+
+        
+        .hero-content {
+            width: 100%;
+            padding: 60px 40px 40px 40px;
+
+        }
+
+        .swiper-container {
+            position: absolute;
+            z-index: -10;
+            width: 100%;
+            padding-top: 20px;
+
+            .swiper-top, .swiper-bottom {
+                    @include flex-center;
+                    width: 100%;
+                    padding: 10px 0;
+
+                    .swiper-card {
+                        width: 100px;
+                        height: 200px;
+
+                        .btn-card {
+                            display: none;
+                        }
+                    }
+                }
+        }
+
+
+
+    }
+}
+
+
+// large breakpoint 
+@include respond(lg) {
+    .hero {
+        display: flex;
+        width: 100%;
+        gap: 30px;
+        
+        .hero-content {
+            width: 45%;
+            padding-left: 100;
+
+            header {
+                h1 {
+                    font-size: 30px;
+                    font-weight: 500;
+                    text-align: left;
+                }
+
+                p {
+                    font-size: 13px;
+                    opacity: 70%;
+                }
+            }
+
+            .milestone-container {
+                display: flex;
+                flex-direction: column;
+
+                .milestone-card {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 25px;
+
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    .inner-milestone {
+                        @include flex-center;
+
+                        p {
+                            font-size: 14px;
+                            margin-left: 5px;
+                        }
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            .cta-buttons {
+                @include flex-center;
+                gap: 15px;
+                margin-top: 50px;
+
+                .explore-button {
+                    font-size: 16;
+                    text-decoration: none;
+                    color: $primary-color;
+                    background: white;
+                    font-family: $font-heading;
+                    padding: 10px 16;
+                    border: 2px solid white ;
+                    border-radius: 6px;
+                }
+
+                .hero-pricing-button {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $font-color;
+                    font-family: $font-heading;
+                    padding: 10px 30px;
+                    transition: all 0.2s;
+                    border: 2px solid black;
+                    border-radius: 6px;
+
+                    &:hover {
+                        border: 2px solid white ;
+                        border-radius: 6px;
+                        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+
+        }
+
+        .swiper-container {
+            position: relative;
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            z-index: 1000;
+            padding-top: 60px;
+
+            .swiper-top, .swiper-bottom {
+                @include flex-center;
+                width: 80%;
+                padding: 10px 0;
+
+                .swiper-card {
+                    width: 100px;
+                    height: 160px;
+                    padding-top: 10px;
+                    transform: rotate(-1deg) skewX(10deg);
+                    transform-origin: center;
+                    transition: transform 1s ease;
+                    cursor: pointer;
+                    object-fit: cover;
+
+                    .btn-card {
+                        display: block;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        padding: 5px 20px;
+                        background-color: rgba(0,0,0,0.6);
+                        color: white;
+                        border: 2px solid rgba(255, 255, 255, 1);
+                        text-decoration: none;
+                        border-radius: 8px;
+                        font-size: 16px;
+                        pointer-events: none;
+                        transition: opacity 0.3s ease;
+                        z-index: 1000;
+                    }
+
+                    &:hover {
+
+                         .poster {
+                            transform: scale(1.1);
+                            filter: blur(2px);
+                            border: 2px solid white;
+                        }
+
+                        .btn-card {
+                            opacity: 100;
+                            pointer-events: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// larger breakpoint
+@include respond(xl) {
+     .hero {
+        display: flex;
+        width: 100%;
+        gap: 30px;
+
+        .hero-content {
+            width: 45%;
+            padding-left: 100px;
+
+            header {
+                h1 {
+                    font-size: 36px;
+                    font-weight: 600;
+                    text-align: left;
+                }
+
+                p {
+                    font-size: 13px;
+                    opacity: 70%;
+                }
+            }
+
+            .milestone-container {
+                display: flex;
+                flex-direction: column;
+
+                .milestone-card {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 25px;
+
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    .inner-milestone {
+                        @include flex-center;
+
+                        p {
+                            font-size: 14px;
+                            margin-left: 5px;
+                        }
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+            .cta-buttons {
+                @include flex-center;
+                gap: 15px;
+                margin-top: 50px;
+
+                .explore-button {
+                    font-size: 16;
+                    text-decoration: none;
+                    color: $primary-color;
+                    background: white;
+                    font-family: $font-heading;
+                    padding: 10px 16;
+                    border: 2px solid white ;
+                    border-radius: 6px;
+                }
+
+                .hero-pricing-button {
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: $font-color;
+                    font-family: $font-heading;
+                    padding: 10px 30px;
+                    transition: all 0.2s;
+                    border: 2px solid black;
+                    border-radius: 6px;
+
+                    &:hover {
+                        border: 2px solid white ;
+                        border-radius: 6px;
+                        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+
+        }
+
+        .swiper-container {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 40px;
+
+            .swiper-top, .swiper-bottom {
+                @include flex-center;
+                width: 80%;
+                padding: 10px 0;
+
+                .swiper-card {
+                    width: 100px;
+                    height: 220px;
+                    padding-top: 10px;
+                    transform: rotate(-1deg) skewX(10deg);
+                    transform-origin: center;
+                    transition: transform 1s ease;
+                    cursor: pointer;
+                    object-fit: cover;
+
+                    .btn-card {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        opacity: 0;
+                        padding: 5px 20px;
+                        background-color: rgba(0,0,0,0.6);
+                        color: white;
+                        border: 2px solid rgba(255, 255, 255, 1);
+                        text-decoration: none;
+                        border-radius: 8px;
+                        font-size: 16px;
+                        pointer-events: none;
+                        transition: opacity 0.3s ease;
+                        z-index: 1000;
+                    }
+
+                    &:hover {
+
+                         .poster {
+                            transform: scale(1.1);
+                            filter: blur(2px);
+                            border: 2px solid white;
+                        }
+
+                        .btn-card {
+                            opacity: 100;
+                            pointer-events: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+

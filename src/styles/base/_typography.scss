@@ -1,0 +1,24 @@
+// For fonts/text
+
+body {
+  font-family: $font-body;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: $font-color;
+    font-family: $font-heading;
+}
+
+p {
+  color: $font-color;
+  font-family: $font-body;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
