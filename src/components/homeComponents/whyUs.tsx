@@ -4,7 +4,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { Brain, Camera, Brush, Code2, Layers3, Smile } from 'lucide-react';
+import { Brain, Camera, Brush, Code2 } from 'lucide-react';
 import { motion, useInView, easeOut } from 'framer-motion';
 import Image from 'next/image';
 

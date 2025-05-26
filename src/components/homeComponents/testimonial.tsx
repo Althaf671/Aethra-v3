@@ -211,7 +211,7 @@ export default function Testimonial() {
                         </div>
 
                         {/* Middle card */}
-                        <p className='middle-card-text'>"{testimonials.review}"</p>
+                        <p className='middle-card-text'>&quot;{testimonials.review}&quot;</p>
 
                         {/* Bottom card */}
                         <div className="bottom-card">
