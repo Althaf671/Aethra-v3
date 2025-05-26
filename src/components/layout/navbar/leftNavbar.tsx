@@ -16,8 +16,8 @@ export default function LeftNavbar() {
                 </h2>
             </Link>
             <ul>
-                <li><Link href='/#hero-section'>Home</Link></li>
-                <li className="pricing-navbar"><Link href='/#whyus'>Pricing</Link></li>
+                <li><Link href='/'>Home</Link></li>
+                <li className="pricing-navbar"><Link href='/#pricing'>Pricing</Link></li>
                 <li><Link href='/#whyus'>Instruction</Link></li>
                 <li><Link href='/client/about'>About</Link></li>
             </ul>

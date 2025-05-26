@@ -13,22 +13,22 @@ const posters = [
   {
     src: '/images/homeAssets/poster/webDev.webp',
     alt: 'View Web dev plan and pricing',
-    href: '#catalog-section',
+    href: '/#catalog',
   },
   {
     src: '/images/homeAssets/poster/consultant.webp',
     alt: 'View Consultant services',
-    href: '#catalog-section',
+    href: '/#catalog',
   },
   {
     src: '/images/homeAssets/poster/graphicDesigner.webp',
     alt: 'View Graphic Design services',
-    href: '#catalog-section',
+    href: '/#catalog',
   },
   {
     src: '/images/homeAssets/poster/videoEditing.webp',
     alt: 'View Video Editing services',
-    href: '#catalog-section',
+    href: '/#catalog',
   },
 ];
 

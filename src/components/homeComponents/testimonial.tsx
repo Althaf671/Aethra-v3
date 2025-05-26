@@ -2,7 +2,7 @@
 //=========== TESTIMONIALS COMPONENT ==========//
 'use client';
 
-import React, { useRef } from 'react'
+import React, { useRef } from 'react';
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion, useInView } from 'framer-motion';
@@ -86,6 +86,15 @@ export default function Testimonial() {
     return (
         <section className="testimonial">
 
+
+
+
+            {/* THIS IS THE APP MIDDLE BACKGROUND */}
+            <div className='middle-bg'></div>
+
+
+
+
             {/* Testimonial Header */}
             <header>
                 <motion.div
@@ -94,7 +103,7 @@ export default function Testimonial() {
                     animate={isInView ? { x: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
                 >
-                    <h2><span className='golden-text'>Trusted</span> by Top Companies</h2>
+                    <h2><span className='golden-text'>Trusted</span> by Industry-Leading Companies Worldwide</h2>
                 </motion.div>
 
                     {/* Fake companies top */}
@@ -129,6 +138,10 @@ export default function Testimonial() {
                                 />
                             </div>
                         ))}
+                    </div>
+
+                    <div className='hr-container'>
+                        <hr className='hr-line'></hr>
                     </div>
                     
                     {/* Star rate */}

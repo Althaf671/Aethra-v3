@@ -11,3 +11,18 @@ body {
 a {
   color: $font-color;
 }
+
+@keyframes glow-move {
+  0% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.2),
+                 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4),
+                 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.2),
+                 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+}
