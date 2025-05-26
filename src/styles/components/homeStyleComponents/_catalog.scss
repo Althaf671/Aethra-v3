@@ -1,0 +1,236 @@
+//=========== CATALOG STYLE ==========//
+
+// breakpoint default 
+.catalog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 180px 20px 0 20px;
+  width: 100%;
+
+  .left-catalog {
+    text-align: left;
+
+    header {
+      @include flex-column;
+      margin: 30px 0;
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .golden-text {
+        @include golden-text;
+      }
+    }
+  }
+
+  .catalog-inner-container {
+    position: relative;
+    @include flex-column;
+    background: #111111;
+    padding: 5cqh 0;
+    border-radius: 20px;
+    width: 85vw;
+
+    .upper-text {
+      padding: 0 30px;
+    }
+
+    .right-catalog {
+      background: #111111;
+      width: 100%;
+      margin-top: 30px;
+
+      .catalog-card-container {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+
+        .inner-catalog-card {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          background-color: #18181b;
+          border-radius: 12px;
+          width: 200px;
+          height: auto;
+          transition: all 0.7s ease-in;
+          overflow: hidden;
+
+          .card-preview {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+
+            .poster-card {
+              border-top-right-radius: 12px;
+              border-bottom-right-radius: 12px;
+            }
+
+            .preview-icon {
+              color: gold;
+            }
+
+            .inner-preview-card {
+              h3 {
+                margin-top: 10px;
+                font-size: 14px;
+              }
+            }
+          }
+
+          .hidden-catalog {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-10px);
+            overflow: hidden;
+            margin-left: 10px;
+            padding: 0 15px;
+            transition: all 0.5s ease-in-out;
+
+            p {
+              font-size: 14px;
+              font-family: $font-heading;
+            }
+
+            img {
+              width: 200px;
+              height: auto;
+              border-radius: 8px;
+            }
+          }
+
+          &:hover,
+          &:active {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 200px;
+            padding-bottom: 30px;
+
+            .hidden-catalog {
+              max-height: 500px;
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// breakpoint large
+@include respond(lg) {
+  .catalog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 180px 20px 0 20px;
+    width: 100%;
+
+    .left-catalog {
+      text-align: left;
+
+      header {
+        @include flex-column;
+        margin: 30px 0;
+
+        h2 {
+          font-size: 30px;
+        }
+
+        .golden-text {
+          @include golden-text;
+        }
+      }
+    }
+
+    .catalog-inner-container {
+      position: relative;
+      @include flex-column;
+      background: #111111;
+      padding: 70px 0;
+      border-radius: 20px;
+      width: 90vw;
+
+
+      .right-catalog {
+        background: #111111;
+        width: 100%;
+        margin-top: 30px;
+
+        .catalog-card-container {
+          display: flex;
+          justify-content: center;
+          gap: 2rem;
+          flex-wrap: wrap;
+
+          .inner-catalog-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #18181b;
+            border-radius: 12px;
+            width: 200px;
+            height: auto;
+            transition: all 0.7s ease;
+            overflow: hidden;
+
+            .card-preview {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding-bottom: 20px;
+
+              .poster-card {
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+              }
+
+              .preview-icon {
+                color: gold;
+              }
+
+              .inner-preview-card {
+                h3 {
+                  margin-top: 10px;
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .hidden-catalog {
+              display: none;
+              margin-left: 10px;
+              padding: 15px 15px 0 15px;
+
+              p {
+                font-size: 14px;
+                font-family: $font-heading;
+              }
+
+              img {
+                width: 200px;
+                height: auto;
+                border-radius: 8px;
+              }
+            }
+
+            &:hover {
+              flex-direction: row;
+              align-items: flex-start;
+              width: 420px;
+
+              .hidden-catalog {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

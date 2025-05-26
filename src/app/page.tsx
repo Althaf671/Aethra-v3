@@ -3,6 +3,7 @@ import "../styles/main.scss"
 import WhyUs from "@/components/homeComponents/whyUs";
 import Navbar from "@/components/layout/navbar/navbar";
 import Testimonial from "@/components/homeComponents/testimonial";
+import { Catalog } from "@/components/homeComponents/catalog";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <WhyUs />
         <Testimonial />
+        <Catalog />
       </main>
     </>
   );

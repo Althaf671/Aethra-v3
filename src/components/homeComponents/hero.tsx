@@ -4,7 +4,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useInView, easeOut } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -13,22 +13,22 @@ const posters = [
   {
     src: '/images/homeAssets/poster/webDev.webp',
     alt: 'View Web dev plan and pricing',
-    href: '#whyus',
+    href: '#catalog-section',
   },
   {
     src: '/images/homeAssets/poster/consultant.webp',
     alt: 'View Consultant services',
-    href: '#whyus',
+    href: '#catalog-section',
   },
   {
     src: '/images/homeAssets/poster/graphicDesigner.webp',
     alt: 'View Graphic Design services',
-    href: '#whyus',
+    href: '#catalog-section',
   },
   {
     src: '/images/homeAssets/poster/videoEditing.webp',
     alt: 'View Video Editing services',
-    href: '#whyus',
+    href: '#catalog-section',
   },
 ];
 
@@ -85,7 +85,7 @@ export default function Hero() {
                     {/* Pricing button */}
                     <motion.div>
                         <Link
-                            href="/pricing"
+                            href="/#pricing"
                             aria-label="Check our Pricing"
                             className="hero-pricing-button"
                         >

@@ -7,7 +7,6 @@ import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { motion, useInView } from 'framer-motion';
 import type { Swiper as SwiperType } from 'swiper';
-import { Autoplay } from 'swiper/modules';
 import Image from "next/image";
 
 const testimonials = [
@@ -91,7 +90,6 @@ export default function Testimonial() {
             <header>
                 <motion.div
                     ref={ref}
-                    className="mb-7 flex justify-center items-center"
                     initial={{ x: -120, opacity: 0 }}
                     animate={isInView ? { x: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -132,7 +130,19 @@ export default function Testimonial() {
                             </div>
                         ))}
                     </div>
-                    <p className='testimonial-center-text'>Our client are satisfied!</p>
+                    
+                    {/* Star rate */}
+                    <div className='rating-star-container'> 
+                        <Image
+                            src='/images/misc/golden-star.svg'
+                            width={100}
+                            height={100}
+                            alt='rating star'
+                            className='rating-star'
+                        />
+                        <h3>4.5</h3>
+                    </div>
+                    <p className='rating-text'>Average rating</p>
             </header>
 
             {/* Navigation button*/}

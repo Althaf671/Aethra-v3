@@ -49,6 +49,31 @@
                 }
             }
 
+            .rating-star-container {
+                @include flex-center;
+                justify-content: center;
+                gap: 5px;
+                margin-top: 30px;
+
+                .rating-star {
+                    width: 45px;
+                    height: 45px;
+                    filter: brightness(90%);
+                }
+
+                h3 {
+                    font-size: 25px;
+                }
+            }
+
+            .rating-text {
+                text-align: center;
+                font-size: 12px;
+                margin-top: 5px;
+                font-family: $font-heading;
+                opacity: 70%;
+            }
+
             .testimonial-center-text {
                 text-align: center;
                 margin: 20px 0;
