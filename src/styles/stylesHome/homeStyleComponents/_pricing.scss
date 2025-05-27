@@ -1,0 +1,214 @@
+//=========== PRICING STYLE ==========//
+
+.pricing-section {
+    @include flex-column;
+    justify-content: center;
+    width: 100%;
+    padding: 180px 20px 50px 20px;
+    user-select: none;
+    -webkit-user-select: none;
+
+    header {
+        @include flex-column;
+        justify-content: center;
+
+        h2 {
+            font-size: 26px;
+
+            @include respond(lg) {
+                font-size: 33px;
+            }
+
+            .golden-text-pricing {
+                @include golden-text;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            color: #ccc
+        }
+    }
+
+    .banner-wrapper {
+        @include flex-center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        height: auto;
+        width: 100%;
+        margin-top: 80px;
+
+        .banner-planet, .banner-star, .banner-nebula {
+            border: 2px solid #ccc;
+            padding: 0px 30px;
+            border-radius: 14px;
+            transition: all 0.3s ease-in;
+            position: relative;
+
+             .upper-banner {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                padding-bottom: 3px;
+
+                .best-plan {
+                    font-size: 12px;
+                    color: $font-color;
+                    position: absolute;
+                    top: -1;
+                    right: -1;
+                    padding: 5px 10px 5px 10px;
+                    border-left: 2px solid #ccc ;
+                    border-bottom: 2px solid #ccc ;
+                    border-bottom-left-radius: 14px;
+                    border-top-right-radius: 14px;
+                    color: black;
+                    background: #ccc;
+                    font-weight: 500;
+
+                }
+
+                .price-start {
+                    font-size: 12px;
+                    font-family: $font-heading;
+                    padding-top: 30px;
+                }
+
+                .plan-price {
+                    font-size: 33px;
+                    font-family: $font-heading;
+                }
+
+                .plan-price-desc {
+                    font-size: 10px;
+                    width: 200px;
+                    opacity: 70%;
+                }
+
+                .consult-btn-desc {
+                    margin-top: 10px;
+                    font-size: 10px;
+                    text-align: right;
+                    margin-right: 20px
+                    
+                }
+
+                .pricing-btn {
+                    @include flex-center;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 10px;
+                    margin-bottom: 20px;
+
+                    .pricing-select-btn {
+                        @include flex-center;
+                        justify-content: center;
+                        width: 60%;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                        padding: 3px 0px;
+                        color: black;
+                        background: white;
+                        font-family: $font-heading;
+                        
+                    }
+
+                    .pricing-consult-btn {
+                        @include flex-center;
+                        justify-content: center;
+                        width: 40%;
+                        border: 1px solid white;
+                        border-radius: 5px;
+                        padding: 3px 0px;
+                        font-family: $font-heading;
+                    }
+                }
+            }
+
+            .bottom-banner {
+                @include flex-column;
+                width: 100%;
+                padding-bottom: 20px;
+
+                h3 {
+                    @include golden-text;
+                    font-size: 20px;
+                    letter-spacing: $spacing-sm;
+                    padding: 20px 0;
+                }
+
+                .benefit-bottom-banner {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 15px;
+                    padding-bottom: 15px;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+                    .inner-benefit-banner {
+                        @include flex-center;
+                        gap: 10px;
+                        padding: 5px 20px 5px 0;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        font-family: $font-heading;
+                    }
+
+                    .icon-check {
+                            color: #00ff99;
+                            width: 25px;
+                            height: 25px;
+
+                    }
+                }
+
+                .plan-gradient-text-star {
+                    @include gradient-text-star
+                }
+
+                .plan-gradient-text-planet {
+                    @include gradient-text-planet
+                }
+
+                .plan-gradient-text-nebula {
+                    @include gradient-text-nebula
+                }
+
+
+            }
+
+            &:hover ,.banner-planet, .banner-star {
+                    scale: 1.02;
+                    box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+                    background: rgb(19, 19, 17);
+            }
+        }
+
+        .banner-nebula {
+            scale: 1.10;
+
+            &:hover {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+                background: rgb(19, 19, 17);
+                scale: 1.11;
+            }
+        }
+  
+    }
+
+    .disclaimer {
+        font-size: 12px;
+        opacity: 60%;
+        color: $font-color;
+        text-align: center;
+        margin-top: 70px;
+        padding: 0 20px;
+
+        @include respond(lg) {
+            margin-top: 100px;
+            padding: 0 200px;
+            font-size: 14px;
+        }
+    }
+}

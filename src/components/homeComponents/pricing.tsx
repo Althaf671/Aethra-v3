@@ -6,8 +6,11 @@ import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Check } from 'lucide-react';
 import Link from 'next/link';
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 export default function Pricing() {
+
+   const { isAuthenticated } = useKindeBrowserClient();
 
     // Parallax Title
     const ref = useRef(null);
@@ -45,7 +48,25 @@ export default function Pricing() {
 
                     {/* pricing action button */}
                     <div className='pricing-btn'>
-                        <a href="https://web.whatsapp.com/?locale=id_ID" target="_blank" rel="noopener noreferrer" className='pricing-select-btn'>Select</a>
+
+                        {isAuthenticated ? (
+                        <a
+                            href="https://web.whatsapp.com/?locale=id_ID"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="pricing-select-btn"
+                        >
+                            Select
+                        </a>
+                        ) : (
+                        <Link
+                            href="/auth/login"
+                            className="pricing-select-btn"
+                            style={{ opacity: 0.7, pointerEvents: 'auto' }}
+                        >
+                            Login to Select
+                        </Link>
+                        )}
                         <Link href="https://web.whatsapp.com/?locale=id_ID" className='pricing-consult-btn'>Consult</Link>
                     </div>
 
@@ -95,7 +116,24 @@ export default function Pricing() {
 
                     {/* pricing action button */}
                     <div className='pricing-btn'>
-                        <a href="https://web.whatsapp.com/?locale=id_ID" target="_blank" rel="noopener noreferrer" className='pricing-select-btn'>Select</a>
+                    {isAuthenticated ? (
+                    <a
+                        href="https://web.whatsapp.com/?locale=id_ID"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pricing-select-btn"
+                    >
+                        Select
+                    </a>
+                    ) : (
+                    <Link
+                        href="/auth/login"
+                        className="pricing-select-btn"
+                        style={{ opacity: 0.7, pointerEvents: 'auto' }}
+                    >
+                        Login to Select
+                    </Link>
+                    )}
                         <Link href="https://web.whatsapp.com/?locale=id_ID" className='pricing-consult-btn'>Consult</Link>
                     </div>
 
@@ -143,7 +181,24 @@ export default function Pricing() {
 
                     {/* pricing action button */}
                     <div className='pricing-btn'>
-                        <a href="https://web.whatsapp.com/?locale=id_ID" target="_blank" rel="noopener noreferrer" className='pricing-select-btn'>Select</a>
+                    {isAuthenticated ? (
+                    <a
+                        href="https://web.whatsapp.com/?locale=id_ID"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pricing-select-btn"
+                    >
+                        Select
+                    </a>
+                    ) : (
+                    <Link
+                        href="/auth/login"
+                        className="pricing-select-btn"
+                        style={{ opacity: 0.7, pointerEvents: 'auto' }}
+                    >
+                        Login to Select
+                    </Link>
+                    )}
                         <Link href="https://web.whatsapp.com/?locale=id_ID" className='pricing-consult-btn'>Consult</Link>
                     </div>
 
