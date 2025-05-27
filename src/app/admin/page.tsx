@@ -3,6 +3,6 @@
 
 export default function AdminDashboard() {
     return (
-        <main></main>
+        <main className="admin">This is ADMIN PAGE</main>
     )
 }
