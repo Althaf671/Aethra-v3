@@ -16,7 +16,7 @@ const mainRoutes = [
 
 export default function RightNavbar() {
   const pathname = usePathname();
-  const { user, isAuthenticated, isLoading } = useKindeBrowserClient();
+  const { user, isAuthenticated } = useKindeBrowserClient();
 
   return (
     <div className="right-navbar">
@@ -26,7 +26,6 @@ export default function RightNavbar() {
 
       <ul>
         {mainRoutes.map(({ path, requiresAuth }) => {
-          const isActive = pathname === path;
 
           if (requiresAuth && !isAuthenticated) {
             return (
