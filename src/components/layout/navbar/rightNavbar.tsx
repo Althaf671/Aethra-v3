@@ -11,7 +11,7 @@ export default function RightNavbar() {
              <div className="lang">
                 <p>🇬🇧 Eng</p>
             </div>
-            <Link href='/client/about'>
+            <Link href='/auth/login'>
                 <Image 
                     src='/images/misc/profile.svg'
                     width={35}

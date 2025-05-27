@@ -9,9 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@kinde-oss/kinde-auth-nextjs": "^2.6.2",
     "lucide-react": "^0.511.0",
     "motion": "^12.12.2",
-    "next": "15.1.8",
+    "next": "^15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sass": "^1.89.0",

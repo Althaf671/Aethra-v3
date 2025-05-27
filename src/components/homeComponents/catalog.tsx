@@ -119,6 +119,36 @@ const toolsIcon = [
     alt: "html5",
     href: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
   },
+  {
+    name: "React",
+    src: "/images/homeAssets/tools/react.svg",
+    alt: "react",
+    href: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+  },
+  {
+    name: "Canva",
+    src: "/images/homeAssets/tools/canva.svg",
+    alt: "canva",
+    href: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+  },
+  {
+    name: "JavaScript",
+    src: "/images/homeAssets/tools/javascript.svg",
+    alt: "javascrip",
+    href: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+  },
+  {
+    name: "i18next",
+    src: "/images/homeAssets/tools/i18next.svg",
+    alt: "118next",
+    href: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+  },
+  {
+    name: "supabase",
+    src: "/images/homeAssets/tools/supabase.svg",
+    alt: "supabase",
+    href: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+  },
 ];
 
 
@@ -129,7 +159,7 @@ export const Catalog = () => {
       const isInView = useInView(ref, { once: true });
     
   return (
-    <section id="catalog-section" className="catalog">
+    <section id="catalog-section" className="catalog ">
 
         {/* Left Catalog */}
         <div className="left-catalog">

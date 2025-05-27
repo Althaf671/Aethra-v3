@@ -84,7 +84,7 @@ export default function Testimonial() {
   const swiperRef = useRef<SwiperType | null>(null);
 
     return (
-        <section className="testimonial">
+        <section className="testimonial scroll-section">
 
 
 

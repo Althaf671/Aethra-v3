@@ -25,7 +25,7 @@ export default function Pricing() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
         >
             <header>
-                    <h2>Choose a <span className="golden-text-pricing">Plan </span> that's right for you.</h2>
+                    <h2>Choose a <span className="golden-text-pricing">Plan </span> that&apos;s right for you.</h2>
                     <p>Prices shown are base estimates. Final costs may vary depending on project scope.</p>
             </header>
         </motion.div>
@@ -38,7 +38,6 @@ export default function Pricing() {
 
                 {/* upper banner */}
                 <div className="upper-banner">
-                    <div className='discount'>5%</div>
                     <p className='price-start'>Start from</p>
                     <p className='plan-price'>$300</p>
                     <p className='plan-price-desc'>Perfect for beginners starting their digital journey. </p>
@@ -88,7 +87,7 @@ export default function Pricing() {
             <div className="banner-nebula">
                 {/* upper banner */}
                 <div className="upper-banner">
-                    <div className='discount'>5%</div>
+                    <div className='best-plan'>Best deal!</div>
                     <p className='price-start'>Start from</p>
                     <p className='plan-price'>$1000</p>
                     <p className='plan-price-desc'>Designed for ambitious visions and high-end projects. </p>
@@ -137,7 +136,6 @@ export default function Pricing() {
             <div className="banner-star">
                 {/* upper banner */}
                 <div className="upper-banner">
-                    <div className='discount'>5%</div>
                     <p className='price-start'>Start from</p>
                     <p className='plan-price'>$500</p>
                     <p className='plan-price-desc'>Ideal for growing creators needing more features and faster performance.</p>

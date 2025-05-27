@@ -36,7 +36,7 @@ export default function WhyUs() {
     const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section id='whyus' className="why-us">
+    <section id='whyus' className="why-us ">
 
       {/* Why us backgorund */}
       <div className='whyus-bg'>
