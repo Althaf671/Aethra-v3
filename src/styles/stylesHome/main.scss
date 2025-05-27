@@ -10,17 +10,23 @@
 @import "../base/typography";
 @import "../base/global";
 
-// components home
+// components 
 @import "./homeStyleComponents/hero";
 @import "./homeStyleComponents/whyUs";
 @import "./homeStyleComponents/testimonial";
 @import "./homeStyleComponents/catalog";
 @import "./homeStyleComponents/pricing";
+@import "./homeStyleComponents/profile";
+@import "./homeStyleComponents/dashboard";
+@import "./homeStyleComponents//profileBannner";
 
 
 
-// layout navbar
-@import "./layout/navbar"
+// layout 
+@import "./layout/navbar";
+@import "./layout//footer";
 
 
 // admin styles
+
+

@@ -1,0 +1,195 @@
+.footer-container {
+  background-color: #111111;
+  color: #ccc;
+  padding: 5rem 2rem 3rem;
+  border-top: 1px solid #444;
+  margin-top: 10rem;
+
+  .highlight {
+    color: #eeba2b; // hanya untuk highlight teks penting
+  }
+
+  .footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 3rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 2fr 1fr 1fr 2fr;
+    }
+
+    .footer-brand {
+      max-width: 420px;
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        letter-spacing: 0.5px;
+        color: #ccc;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #bbb;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .footer-nav,
+    .footer-contact,
+    .footer-newsletter {
+      h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: #eeba2b;  // warna emas cuma di judul section
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 0.75rem;
+
+          a {
+            color: #ccc;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #eeba2b; // hover aksen emas
+            }
+
+            svg {
+              stroke: #ccc;
+              stroke-width: 1.5;
+              transition: stroke 0.3s ease;
+            }
+
+            &:hover svg {
+              stroke: #eeba2b;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-contact {
+      .contact-hours {
+        margin-top: 1rem;
+        font-size: 0.85rem;
+        color: #777;
+        font-style: italic;
+      }
+    }
+
+    .footer-newsletter {
+      form {
+        display: flex;
+        gap: 0.5rem;
+
+        input[type="email"] {
+          flex: 1;
+          padding: 0.6rem 1rem;
+          border: 1px solid #444;
+          border-radius: 4px;
+          font-size: 0.95rem;
+          outline: none;
+          background-color: #222;
+          color: #ccc;
+
+          &::placeholder {
+            color: #666;
+          }
+        }
+
+        button {
+          background-color: #eeba2b;
+          border: none;
+          padding: 0 1.2rem;
+          border-radius: 4px;
+          font-weight: 700;
+          cursor: pointer;
+          color: #111;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: darken(#eeba2b, 10%);
+          }
+        }
+      }
+
+      .newsletter-note {
+        font-size: 0.8rem;
+        color: #666;
+        margin-top: 0.6rem;
+      }
+    }
+  }
+
+  .footer-social-cta {
+    max-width: 1280px;
+    margin: 3rem auto 1.5rem;
+    text-align: center;
+
+    p {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #eeba2b;
+    }
+
+    a.cta-button {
+      display: inline-block;
+      background-color: #eeba2b;
+      color: #111;
+      font-weight: 700;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 0 8px rgba(238, 186, 43, 0.6);
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #cca72b;
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    border-top: 1px solid #222;
+
+    ul.legal-links {
+      margin: 0.5rem 0 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+
+      li a {
+        color: #777;
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #eeba2b;
+        }
+      }
+    }
+  }
+}

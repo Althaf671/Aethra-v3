@@ -46,7 +46,7 @@ export default function DropdownNav() {
                 <ul>
                     <li><Link href='/'>Home</Link></li>
                     <li className="pricing-navbar-dropdown"><Link href='/#whyus'>Pricing</Link></li>
-                    <li><Link href='/#instruction'>Instruction</Link></li>
+                    <li><Link href='/#catalog'>Catalog</Link></li>
                     <li><Link href='/client/about'>About</Link></li>
                 </ul>
             </div>

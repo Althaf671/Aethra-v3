@@ -199,8 +199,8 @@ export const Catalog = () => {
                                  <div className="card-preview">
                                     <Image
                                         src={catalogItem.src}
-                                        width={200}
-                                        height={200}
+                                        width={300}
+                                        height={300}
                                         alt={catalogItem.alt}
                                         className="poster-card"
                                     />

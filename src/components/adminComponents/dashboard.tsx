@@ -1,81 +1,72 @@
 
 //========== DASHBOARD COMPONENT ==========//
 
-'use client';
+import LogoutBtn from "@/app/client/profile/logout-btn";
+import Link from "next/link";
 
-import Image from "next/image";
-import '../../styles/stylesHome/main.scss'
+export default function AdminDashboard() {
+  // Dummy data analytics
+  const totalUsers = 0;
+  const totalRevenue = 0;
+  const activeOrders = 0;
+  const completedOrders = 0;
 
-export default function Dashboard() {
-    return (
-        <section className="admin">
+  return (
+    <section className="admin__dashboard">
+      <div className="admin__header">
+        <h1 className="admin__title">Admin Dashboard</h1>
+        <p className="admin__subtitle">Manage all user orders from here.</p>
+      </div>
 
-            {/* dashboard header */}
-            <header>
-                <h2>
-                    <span className="golden-a">A</span>
-                    ethra
-                </h2>
-            </header>
+      {/* Analytics Cards */}
+      <div className="admin__analytics">
+        <div className="analytics__card">
+          <h3>Total Users</h3>
+          <p>{totalUsers}</p>
+        </div>
+        <div className="analytics__card">
+          <h3>Total Revenue</h3>
+          <p>$ {totalRevenue.toLocaleString("id-ID")}</p>
+        </div>
+        <div className="analytics__card">
+          <h3>Active Orders</h3>
+          <p>{activeOrders}</p>
+        </div>
+        <div className="analytics__card">
+          <h3>Completed Orders</h3>
+          <p>{completedOrders}</p>
+        </div>
+      </div>
 
-            {/* dashboard grid */}
-            <div className="dashboard-container">
+      {/* Orders Table */}
+      <div className="admin__card">
+        <h2 className="section__title">User Orders</h2>
+        <div className="admin__table-wrapper">
+          <table className="admin__table">
+            <thead>
+              <tr>
+                <th>Order ID</th>
+                <th>User</th>
+                <th>Email</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Total</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colSpan={7} className="empty-row">No orders available.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-                {/* dashboard card */}
-                <div className="dashboard-card">
-                    <h3>Total User</h3>
-                    <div className="inner-dashboard-card">
-                        <Image 
-                            src='/images/adminAssets/total-users.svg'
-                            alt='total user'
-                            width={40}
-                            height={40}
-                        />
-                        <p>UNKNOWN</p>
-                    </div>
-                </div>
-
-                <div className="dashboard-card">
-                    <h3>Active Order</h3>
-                    <div className="inner-dashboard-card">
-                        <Image 
-                            src='/images/adminAssets/order.svg'
-                            alt='total user'
-                            width={40}
-                            height={40}
-                        />
-                        <p>UNKNOWN</p>
-                    </div>
-                </div>
-
-                <div className="dashboard-card">
-                    <h3>Revenue</h3>
-                    <div className="inner-dashboard-card">
-                        <Image 
-                            src='/images/adminAssets/revenue.svg'
-                            alt='total user'
-                            width={40}
-                            height={40}
-                        />
-                        <p>UNKNOWN</p>
-                    </div>
-                </div>
-
-                <div className="dashboard-card">
-                    <h3>Completed</h3>
-                    <div className="inner-dashboard-card">
-                        <Image 
-                            src='/images/adminAssets/checklist.svg'
-                            alt='total user'
-                            width={40}
-                            height={40}
-                        />
-                        <p>UNKNOWN</p>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-    )
+      <div className="profile__logout">
+            <Link href='/'>Return</Link>
+            <LogoutBtn />
+      </div>
+    </section>
+  );
 }
