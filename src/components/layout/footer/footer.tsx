@@ -105,7 +105,7 @@ const Footer = () => {
       {/* Call to Action */}
       <div className="footer-social-cta">
         <p>Let's build something amazing together!</p>
-        <Link href="/client/contact" className="cta-button">
+        <Link href="/" className="cta-button">
           Contact Us
         </Link>
       </div>
