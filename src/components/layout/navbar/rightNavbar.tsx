@@ -3,7 +3,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { LoginLink, useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
 
 const mainRoutes = [
@@ -15,7 +14,6 @@ const mainRoutes = [
 ];
 
 export default function RightNavbar() {
-  const pathname = usePathname();
   const { user, isAuthenticated } = useKindeBrowserClient();
 
   return (
