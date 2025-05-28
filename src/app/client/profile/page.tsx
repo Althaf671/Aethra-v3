@@ -12,7 +12,7 @@ export default async function ProfilePage() {
   if (!isAuthenticated || !user) {
     return (
       <main className="main">
-        <h2>Please log in to view your profile.</h2>
+        <h2>Please log in to view your profile...</h2>
       </main>
     );
   }
